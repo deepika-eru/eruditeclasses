@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erudite Education - Home</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        header { background-color: #007bff; color: white; padding: 1rem; text-align: center; }
+        nav { display: flex; justify-content: center; gap: 1rem; margin-top: 1rem; }
+        nav a { color: white; text-decoration: none; padding: 0.5rem; border-radius: 5px; background-color: #0056b3; }
+        nav a:hover { background-color: #003d82; }
+        section { padding: 2rem; margin: 1rem auto; max-width: 1200px; background-color: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .quote { text-align: center; font-style: italic; font-size: 1.5rem; margin: 1rem 0; }
+        .courses { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+        .course-icon { width: 150px; text-align: center; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; cursor: pointer; }
+        .course-icon:hover { background-color: #e9ecef; }
+        .events { list-style: none; padding: 0; }
+        .events li { margin: 0.5rem 0; }
+        .videos { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        iframe { width: 300px; height: 200px; }
+        .social { text-align: center; margin-top: 1rem; }
+        .social a { margin: 0 1rem; text-decoration: none; font-size: 1.5rem; }
+        footer { text-align: center; padding: 1rem; background-color: #007bff; color: white; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Erudite Education</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="why-erudite.html">Why Erudite</a>
+            <a href="courses.html">Courses Offered</a>
+            <a href="products.html">Our Products</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="team.html">Our Team</a>
+        </nav>
+    </header>
+
+    <section id="quotes">
+        <h2>Educational Quotes</h2>
+        <div class="quote" id="quote-display">“Education is the most powerful weapon which you can use to change the world.” – Nelson Mandela</div>
+    </section>
+
+    <section id="about-intro">
+        <h2>About Us</h2>
+        <p>Erudite Education is dedicated to fostering intellectual growth through innovative learning programs. We offer a range of courses designed to enhance skills in mathematics, science, and languages.</p>
+        <a href="about.html">Read More</a>
+    </section>
+
+    <section id="courses">
+        <h2>Courses Offered</h2>
+        <div class="courses">
+            <div class="course-icon" onclick="window.location.href='abacus.html'">🧮 Abacus</div>
+            <div class="course-icon" onclick="window.location.href='vedic-maths.html'">🔢 Vedic Maths</div>
+            <div class="course-icon" onclick="window.location.href='spoken-english.html'">🗣️ Spoken English</div>
+            <div class="course-icon" onclick="window.location.href='maths.html'">➗ Maths</div>
+            <div class="course-icon" onclick="window.location.href='science.html'">🧪 Science</div>
+            <div class="course-icon" onclick="window.location.href='languages.html'">🌍 Languages</div>
+            <div class="course-icon" onclick="window.location.href='science-workshops.html'">🔬 Science Workshops</div>
+            <div class="course-icon" onclick="window.location.href='maths-workshops.html'">📐 Maths Workshops</div>
+            <div class="course-icon" onclick="window.location.href='stem-classes.html'">🚀 STEM Classes</div>
+        </div>
+    </section>
+
+    <section id="events">
+        <h2>Our Events</h2>
+        <ul class="events">
+            <li>Maths Olympiad Workshop - October 15, 2023</li>
+            <li>Science Fair - November 20, 2023</li>
+            <li>STEM Innovation Day - December 5, 2023</li>
+        </ul>
+    </section>
+
+    <section id="videos-social">
+        <h2>YouTube Videos</h2>
+        <div class="videos">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="social">
+            <h3>Follow Us</h3>
+            <a href="https://facebook.com">📘 Facebook</a>
+            <a href="https://twitter.com">🐦 Twitter</a>
+            <a href="https://instagram.com">📷 Instagram</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Erudite Education. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const quotes = [
+            "“Education is the most powerful weapon which you can use to change the world.” – Nelson Mandela",
+            "“The beautiful thing about learning is that no one can take it away from you.” – B.B. King",
+            "“An investment in knowledge pays the best interest.” – Benjamin Franklin"
+        ];
+        let index = 0;
+        setInterval(() => {
+            index = (index + 1) % quotes.length;
+            document.getElementById('quote-display').textContent = quotes[index];
+        }, 5000);
+    </script>
+</body>
+</html>
